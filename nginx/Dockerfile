@@ -6,6 +6,7 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 WORKDIR /app
 
 ## add permissions for nginx user
+RUN mkdir /var/cache/nginx/client_temp
 RUN chown -R nginx:nginx /app && chmod -R 755 /app && \
         chown -R nginx:nginx /var/cache/nginx && \
         chown -R nginx:nginx /var/log/nginx && \
