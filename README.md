@@ -1,1 +1,3 @@
 # openshift
+
+test oc binary
