@@ -1,8 +1,5 @@
 FROM nginx:stable-alpine
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends python3
-
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
