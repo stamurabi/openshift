@@ -12,4 +12,4 @@ RUN chown -R nginx:root /app && chmod -R 755 /app && \
         chown -R nginx:root /var/log/nginx && chmod -R g=u /var/log/nginx && \
         chown -R nginx:root /etc/nginx/conf.d && chmod -R g=u /etc/nginx/conf.d
 RUN touch /var/run/nginx.pid && \
-        chown -R nginx:root /var/run/nginx.pid
+        chown -R nginx:root /var/run/nginx.pid && chmod g=u /var/run/nginx.pid 
